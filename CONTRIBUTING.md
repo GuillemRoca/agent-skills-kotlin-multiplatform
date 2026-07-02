@@ -116,6 +116,24 @@ Then review by hand:
 - No emojis unless they add clarity
 - No marketing language — be direct and technical
 
+## Marketplace Listing
+
+The Claude Code marketplace entry lives in the separate
+[GuillemRoca/claude-plugins](https://github.com/GuillemRoca/claude-plugins) repo. To list
+this plugin there, append this entry to the `plugins` array in its
+`.claude-plugin/marketplace.json`:
+
+```json
+{
+  "name": "agent-skills-kotlin-multiplatform",
+  "description": "Production-grade Kotlin Multiplatform and Compose Multiplatform engineering skills for AI coding agents. Covers the full development lifecycle from spec to the app stores across Android, iOS, desktop, and web: shared logic, shared Compose UI, Gradle, and the KMP ecosystem.",
+  "source": {
+    "source": "github",
+    "repo": "GuillemRoca/agent-skills-kotlin-multiplatform"
+  }
+}
+```
+
 ## Pull Request Process
 
 1. Create a branch: `skill/your-skill-name` or `fix/skill-name-issue`
