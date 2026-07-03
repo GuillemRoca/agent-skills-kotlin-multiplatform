@@ -118,10 +118,16 @@ Then review by hand:
 
 ## Marketplace Listing
 
-The Claude Code marketplace entry lives in the separate
-[GuillemRoca/claude-plugins](https://github.com/GuillemRoca/claude-plugins) repo. To list
-this plugin there, append this entry to the `plugins` array in its
-`.claude-plugin/marketplace.json`:
+This plugin is published in the
+[GuillemRoca/claude-plugins](https://github.com/GuillemRoca/claude-plugins) Claude Code
+marketplace (marketplace name `guillemroca`), so it installs directly:
+
+```bash
+claude plugin marketplace add GuillemRoca/claude-plugins
+claude plugin install agent-skills-kotlin-multiplatform@guillemroca
+```
+
+Its registered entry in that repo's `.claude-plugin/marketplace.json` is:
 
 ```json
 {
