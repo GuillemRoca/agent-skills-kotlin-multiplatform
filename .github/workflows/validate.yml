@@ -12,3 +12,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate skill contract
         run: bash scripts/validate-skills.sh
+      - name: Ensure plugin.json has no version field
+        # Updates are keyed on the commit SHA; a version field would freeze users
+        # on that version until it is bumped. See CONTRIBUTING.md "Releases".
+        run: |
+          if jq -e 'has("version")' .claude-plugin/plugin.json > /dev/null; then
+            echo "::error file=.claude-plugin/plugin.json::Remove the \"version\" field — releases are tracked by commit SHA"
+            exit 1
+          fi
