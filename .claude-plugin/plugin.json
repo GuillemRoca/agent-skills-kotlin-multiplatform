@@ -1,7 +1,6 @@
 {
   "name": "agent-skills-kotlin-multiplatform",
   "description": "Production-grade Kotlin Multiplatform and Compose Multiplatform engineering skills for AI coding agents. Covers the full development lifecycle from spec to the app stores across Android, iOS, desktop, and web: shared logic, shared Compose UI, Gradle, and the KMP ecosystem.",
-  "version": "1.0.0",
   "author": {
     "name": "Guillem Roca"
   },
